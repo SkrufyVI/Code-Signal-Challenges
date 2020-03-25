@@ -1,2 +1,2 @@
 # Code-Signal-Challenges
-Math puzzles functions
+Functions for Math puzzles 
