@@ -1,2 +1,4 @@
 # Code-Signal-Challenges
-Functions for Math puzzles 
+
+My answers to Code Signal tests.
+
