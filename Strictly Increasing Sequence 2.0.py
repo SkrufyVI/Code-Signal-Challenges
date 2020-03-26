@@ -1,5 +1,22 @@
-# This function removes a single element from the list, then checks if the sequence is strictly increasing, then re-inserts
-# the element it removed.
+'''
+Given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array.
+
+Note: sequence a0, a1, ..., an is considered to be a strictly increasing if a0 < a1 < ... < an. Sequence containing only one element is also considered to be strictly increasing.
+
+Example
+
+For sequence = [1, 3, 2, 1], the output should be
+almostIncreasingSequence(sequence) = false.
+
+There is no one element in this array that can be removed in order to get a strictly increasing sequence.
+
+For sequence = [1, 3, 2], the output should be
+almostIncreasingSequence(sequence) = true.
+
+'''
+
+#First solution below. This function removes a single element from the list, then checks if the sequence is strictly increasing, then re-inserts the element it removed.
+
 
 # Lesson 1, counter = 0 had to be placed INSIDE the loop as it would set itself to 1 for one flawed run through but save itself as higher than 1
 # Lesson 2, I had to use a While Loop to get out of index error of FOR loop. Should remember this for future attempts to dynamically alter lists.
@@ -14,7 +31,7 @@ def almostIncreasingSequence(sequence):
         counter = 0
 
         num = sequence[i]
-        sequence.pop(i)
+        sequence.pop(i) #Delete element from list -> check whether list is strictly increasing, repeat (sequence.insert) below.
 
         if len(sequence) == 1:
             answer = True
@@ -46,13 +63,12 @@ def almostIncreasingSequence(sequence):
 def first_bad_pair(sequence):
     for i in range(len(sequence)-1):
         if sequence[i] >= sequence[i+1]:
-            return i #This returns the INDEX position of the first element in the bad pair, in this case, 8, position 3.
+            return i #This returns the INDEX position of the first element in the bad pair.
     return -1
 
 # Use the above function to make our second one.
 # Return whether it is possible to obtain a strictly increaisng sequence by removing NO MORE than one element from the array.
 
-[1,2,3,5,4]
 
 def almostIncreasingSequence(sequence):
 
@@ -70,3 +86,4 @@ def almostIncreasingSequence(sequence):
     return False  # Deleting either does not make increasing
 
 # This one is more efficient so passes the Code Signal time test.
+# The key lesson from above was that  that "+" means concatenation for lists.
