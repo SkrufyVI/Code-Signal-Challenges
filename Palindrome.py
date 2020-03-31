@@ -1,8 +1,8 @@
-
+'''
 balloon = "john"
 reversed_baloon = "".join(reversed(balloon))
 print(reversed_baloon)
-
+'''
 
 
 def checkPalindrome(inputString):
