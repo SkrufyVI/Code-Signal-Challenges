@@ -15,13 +15,8 @@ almostIncreasingSequence(sequence) = true.
 
 '''
 
-#First solution below. This function removes a single element from the list, then checks if the sequence is strictly increasing, then re-inserts the element it removed.
-
-
-# Lesson 1, counter = 0 had to be placed INSIDE the loop as it would set itself to 1 for one flawed run through but save itself as higher than 1
-# Lesson 2, I had to use a While Loop to get out of index error of FOR loop. Should remember this for future attempts to dynamically alter lists.
-# Lesson 3, counter += 1 for an error, counter += 0 for perfection. Perfection, therefore, means every loop was perfect, as it tests for counter == 0
-
+# Method 1: this function removes a single element from the list, then checks if the sequence is strictly increasing; 
+# then re-inserts the element it removed.
 
 
 def almostIncreasingSequence(sequence):
@@ -53,10 +48,15 @@ def almostIncreasingSequence(sequence):
             answer = False
     return(answer)
 
-# Problem with the above is it is exceptionally slow and clunky. It takes ages when the list in question has thousands of elements.
-# Need to find a cleaner method.
+'''
+Problem with the above is it is exceptionally slow and clunky. 
+It takes ages when the list in question has thousands of elements.
+Need to find a cleaner method.
+'''
 
-# Step 1, Return the first index of a pair of elements where the earlier element is not less than the later elements
+# Method 2:
+
+# Step 1, Return the first index of a pair of elements where the earlier element is not less than the later elements.
 # If no such pair exists, return -1:
 
 
@@ -66,9 +66,8 @@ def first_bad_pair(sequence):
             return i #This returns the INDEX position of the first element in the bad pair.
     return -1
 
-# Use the above function to make our second one.
+# Step 2. 
 # Return whether it is possible to obtain a strictly increaisng sequence by removing NO MORE than one element from the array.
-
 
 def almostIncreasingSequence(sequence):
 
@@ -86,4 +85,3 @@ def almostIncreasingSequence(sequence):
     return False  # Deleting either does not make increasing
 
 # This one is more efficient so passes the Code Signal time test.
-# The key lesson from above was that  that "+" means concatenation for lists.
