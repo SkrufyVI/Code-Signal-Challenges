@@ -1,4 +1,4 @@
 # Code-Signal-Challenges
 
-My answers to Code Signal tests.
+Methods to solve Code Signal Tests.
 
