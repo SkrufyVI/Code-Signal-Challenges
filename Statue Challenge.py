@@ -28,22 +28,8 @@ def makeArrayConsecutive2(statues):
 
     return extra_statues
 
-print(makeArrayConsecutive2([1, 3, 3, 5]))
 
 
 
 
-'''
-.
 
-a_list = [3, 5, 10, 14]
-a_list.sort()
-length = len(a_list)
-extra_statues = 0
-
-for i in range(0, length-1):
-    if(a_list[i] + a_list[i+1]) != a_list[i] + a_list[i] + 1:
-        extra_statues += (a_list[i] + a_list[i+1]) - (a_list[i] + a_list[i] + 1)
-
-print(extra_statues)
-'''
