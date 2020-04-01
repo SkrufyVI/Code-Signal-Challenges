@@ -1,7 +1,6 @@
 '''
-balloon = "john"
-reversed_baloon = "".join(reversed(balloon))
-print(reversed_baloon)
+Write a function that checks for a palindrome.
+Return True or False.
 '''
 
 
