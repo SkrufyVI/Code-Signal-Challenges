@@ -66,7 +66,7 @@ def sortByHeight(a):
 
 
 
-print(sortByHeight([-1, 150, 160, 170, -1, -1, 180, 190]))
+print(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]))
 
 
 
